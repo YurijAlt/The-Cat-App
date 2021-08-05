@@ -9,23 +9,23 @@
 /* Begin PBXBuildFile section */
 		C4255C4126BC2935004FECFC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4255C4026BC2935004FECFC /* AppDelegate.swift */; };
 		C4255C4326BC2935004FECFC /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4255C4226BC2935004FECFC /* SceneDelegate.swift */; };
-		C4255C4526BC2935004FECFC /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4255C4426BC2935004FECFC /* ViewController.swift */; };
 		C4255C4826BC2935004FECFC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C4255C4626BC2935004FECFC /* Main.storyboard */; };
 		C4255C4B26BC2935004FECFC /* The_Cat_App.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = C4255C4926BC2935004FECFC /* The_Cat_App.xcdatamodeld */; };
 		C4255C4D26BC2936004FECFC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C4255C4C26BC2936004FECFC /* Assets.xcassets */; };
 		C4255C5026BC2936004FECFC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C4255C4E26BC2936004FECFC /* LaunchScreen.storyboard */; };
+		C4255C5826BC2A07004FECFC /* MainCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4255C5726BC2A07004FECFC /* MainCollectionViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		C4255C3D26BC2935004FECFC /* The Cat App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "The Cat App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C4255C4026BC2935004FECFC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C4255C4226BC2935004FECFC /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		C4255C4426BC2935004FECFC /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		C4255C4726BC2935004FECFC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		C4255C4A26BC2935004FECFC /* The_Cat_App.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = The_Cat_App.xcdatamodel; sourceTree = "<group>"; };
 		C4255C4C26BC2936004FECFC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C4255C4F26BC2936004FECFC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		C4255C5126BC2936004FECFC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C4255C5726BC2A07004FECFC /* MainCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainCollectionViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,8 +60,8 @@
 			children = (
 				C4255C4026BC2935004FECFC /* AppDelegate.swift */,
 				C4255C4226BC2935004FECFC /* SceneDelegate.swift */,
-				C4255C4426BC2935004FECFC /* ViewController.swift */,
 				C4255C4626BC2935004FECFC /* Main.storyboard */,
+				C4255C5726BC2A07004FECFC /* MainCollectionViewController.swift */,
 				C4255C4C26BC2936004FECFC /* Assets.xcassets */,
 				C4255C4E26BC2936004FECFC /* LaunchScreen.storyboard */,
 				C4255C5126BC2936004FECFC /* Info.plist */,
@@ -141,7 +141,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C4255C4B26BC2935004FECFC /* The_Cat_App.xcdatamodeld in Sources */,
-				C4255C4526BC2935004FECFC /* ViewController.swift in Sources */,
+				C4255C5826BC2A07004FECFC /* MainCollectionViewController.swift in Sources */,
 				C4255C4126BC2935004FECFC /* AppDelegate.swift in Sources */,
 				C4255C4326BC2935004FECFC /* SceneDelegate.swift in Sources */,
 			);
@@ -300,7 +300,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "yura-chakalyuk.The-Cat-App";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -319,7 +319,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "yura-chakalyuk.The-Cat-App";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
