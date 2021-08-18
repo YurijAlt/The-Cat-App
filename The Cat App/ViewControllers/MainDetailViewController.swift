@@ -17,9 +17,6 @@ class MainDetailViewController: UIViewController {
     //MARK: - Public Properties
     var cat: Cat!
     
-    //MARK: - Private Properties
-    private var isFavorite = false
-    
     //MARK: - Override Methods
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -44,8 +41,7 @@ class MainDetailViewController: UIViewController {
     
     @IBAction func isFavoriteButtonTapped() {
         StorageManager.shared.save(cat.url ?? "")
-        isFavorite.toggle()
-        setStatusForFavoriteButton()
+        favoriteButton.tintColor = .red
         
         let alert = UIAlertController(
             title: "Готово!",
@@ -70,12 +66,10 @@ class MainDetailViewController: UIViewController {
             self.catDetailImage.image = UIImage(data: data)
             self.activityIndicator.stopAnimating()
         }
-        setStatusForFavoriteButton()
+        favoriteButton.tintColor = .gray
     }
+        
     
-    private func setStatusForFavoriteButton() {
-        favoriteButton.tintColor = isFavorite ? .red : .gray
-    }
     
     @objc private func image(_ image: UIImage, didFinishSavingWithError error: Error?, contextInfo: UnsafeRawPointer) {
         if let error = error {
