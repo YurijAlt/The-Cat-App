@@ -59,10 +59,10 @@ class FavoritesDetailViewController: UIViewController {
     
     @objc private func image(_ image: UIImage, didFinishSavingWithError error: Error?, contextInfo: UnsafeRawPointer) {
         if let error = error {
-            let ac = UIAlertController(title: "Save error", message: error.localizedDescription, preferredStyle: .alert)
+            let ac = UIAlertController(title: "Ошибка сохранения", message: error.localizedDescription, preferredStyle: .alert)
             ac.addAction(UIAlertAction(title: "OK", style: .default))
         } else {
-            let ac = UIAlertController(title: "Saved", message: "Image has been saved to your photos", preferredStyle: .alert)
+            let ac = UIAlertController(title: "Готово!", message: "Изображение сохранено в медиатеку", preferredStyle: .alert)
             ac.addAction(UIAlertAction(title: "OK", style: .default))
             present(ac, animated: true)
         }

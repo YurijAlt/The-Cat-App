@@ -79,7 +79,7 @@ class MainDetailViewController: UIViewController {
     
     @objc private func image(_ image: UIImage, didFinishSavingWithError error: Error?, contextInfo: UnsafeRawPointer) {
         if let error = error {
-            let alert = UIAlertController(title: "Save error", message: error.localizedDescription, preferredStyle: .alert)
+            let alert = UIAlertController(title: "Ошибка сохранения", message: error.localizedDescription, preferredStyle: .alert)
             alert.addAction(UIAlertAction(title: "OK", style: .default))
         } else {
             let alert = UIAlertController(title: "Готово!", message: "Изображение сохранено в медиатеку", preferredStyle: .alert)
