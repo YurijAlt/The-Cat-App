@@ -12,8 +12,8 @@ class MainCollectionViewController: UICollectionViewController {
     //MARK: IB Outlets
     @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
     
-    //MARK: Public Properties
-    var cats: [Cat] = []
+    //MARK: Private Properties
+    private var cats: [Cat] = []
     
     //MARK: Override Methods
     override func viewDidLoad() {
