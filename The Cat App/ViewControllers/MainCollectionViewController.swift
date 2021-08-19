@@ -9,20 +9,20 @@ import UIKit
 
 class MainCollectionViewController: UICollectionViewController {
     
-    //MARK: IB Outlets
+    //MARK: - IB Outlets
     @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
     
-    //MARK: Private Properties
+    //MARK: - Private Properties
     private var cats: [Cat] = []
     
-    //MARK: Override Methods
+    //MARK: - Override Methods
     override func viewDidLoad() {
         super.viewDidLoad()
         setupActivityIndicator()
         getCats()
     }
     
-    //MARK: Override Methods
+    //MARK: - Override Methods
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         guard let detailVC = segue.destination as? MainDetailViewController else { return }
         guard let paths = collectionView.indexPathsForSelectedItems else { return }
@@ -30,7 +30,7 @@ class MainCollectionViewController: UICollectionViewController {
         detailVC.cat = cats[indexPath]
     }
     
-    //MARK: Private Methods
+    //MARK: - Private Methods
     private func getCats() {
         NetworkManager.shared.fetchData() { cats in
             self.cats = cats
@@ -46,7 +46,7 @@ class MainCollectionViewController: UICollectionViewController {
         activityIndicator.hidesWhenStopped = true
     }
     
-    // MARK: UICollectionViewDataSource
+    // MARK: - UICollectionViewDataSource
     override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return cats.count
     }
@@ -67,7 +67,7 @@ class MainCollectionViewController: UICollectionViewController {
     
 }
 
-//MARK: Setup UICollectionView
+//MARK: - Setup UICollectionView
 extension MainCollectionViewController: UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         CGSize(width: UIScreen.main.bounds.width / 5, height: UIScreen.main.bounds.width / 5)
