@@ -15,6 +15,7 @@ class FavoritesCollectionViewController: UICollectionViewController {
     //MARK: - Override Methods
     
     override func viewDidAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
         fetchData()
         collectionView.reloadData()
     }
