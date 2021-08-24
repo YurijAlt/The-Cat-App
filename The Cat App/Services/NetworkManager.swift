@@ -11,7 +11,7 @@ class NetworkManager {
     
     static let shared = NetworkManager()
     
-    private let api = "https://api.thecatapi.com/v1/images/search?limit=20&api_key=b2d727d2-01e9-43be-ad52-62d6556f44f6"
+    private let api = "https://api.thecatapi.com/v1/images/search?limit=20&api_key=142744ed-db4e-436b-81ff-dead050671d9"
 
     private init() {}
     
