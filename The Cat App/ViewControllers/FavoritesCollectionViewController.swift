@@ -13,7 +13,7 @@ class FavoritesCollectionViewController: UICollectionViewController {
     private var favoriteCats: [FavoriteCat] = []
     
     //MARK: - Override Methods
-    override func viewDidAppear(_ animated: Bool) {
+    override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         fetchData()
         collectionView.reloadData()
